@@ -1,48 +1,24 @@
-# Spectacle Boilerplate
+# 깃 정리
 
-## Contents
+## 내용
 
-- [Reference](#reference)
-- [Getting Started](#getting-started)
-- [Build & Deployment](#build-deployment)
+- 복구하는 명령어
+- 기타....
 
-## Reference
 
-The Spectacle core API is available at [https://github.com/FormidableLabs/spectacle/blob/master/README.md](https://github.com/FormidableLabs/spectacle/blob/master/README.md).
+## 실행방법
 
-## Getting Started
+- `git clone` 으로 소스를 내려 받음
 
-After downloading the boilerplate, your first order of business is to open a terminal and run 
 ```bash
-yarn
+npm i
 ```
-or 
-```bash
-npm install
-```
-if you're about that life.
 
-Next, run 
-```bash
-rm -R .git
-```
-to remove the existing version control.
+- 실행
 
-Then, to start up the local server, run
 ```bash
 npm start
 ```
 
-Open a browser and hit [http://localhost:3000](http://localhost:3000), and we are ready to roll.
-
-## Build & Deployment
-
-Building the dist version of the project is as easy as running
-```bash
-npm run build
-```
-
-If you want to deploy the slideshow to surge, run 
-```bash
-npm run deploy
-```
+- 다음 URL 로 들어감 [http://localhost:3000](http://localhost:3000)
+- 방향키로 다음 칸으로 넘어 갈 수 있음
