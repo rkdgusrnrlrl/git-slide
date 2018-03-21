@@ -78,11 +78,20 @@ export default class Presentation extends React.Component {
           <Heading size={3} textColor="secondary" caps>머지 후 😇</Heading>
           <Code margin="50px">git heaven</Code>
         </Slide>
+        <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
+          <Heading size={3} textColor="secondary" caps>코드 임시저장</Heading>
+          <Code margin="50px">git stash save</Code>
+        </Slide>
+        <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
+          <Heading size={3} textColor="secondary" caps>아까 저장한 코드꺼내기</Heading>
+          <Code margin="50px">git stash pop</Code>
+        </Slide>
+        <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
+          <Heading size={3} textColor="secondary" caps>인생은 실전</Heading>
+          <Text>브랜치 안따고 master 에 계속 커밋 했을때....</Text>
+        </Slide>
         <Slide transition={["fade"]} bgColor="secondary" textColor="primary">
-          <BlockQuote>
-            <Quote>이미..망....</Quote>
-            <Cite>강현구</Cite>
-          </BlockQuote>
+          <Heading size={3} textColor="primary" caps>끗</Heading>
         </Slide>
       </Deck>
     );
