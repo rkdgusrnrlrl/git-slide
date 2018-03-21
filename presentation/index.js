@@ -13,7 +13,8 @@ import {
   Slide,
   Text,
   CodePane,
-  Code
+  Code,
+  Image 
 } from "spectacle";
 
 // Import theme
@@ -32,66 +33,41 @@ const theme = createTheme({
   secondary: "Helvetica"
 });
 
+const images = {
+  badgithub: require('../assets/bad-github.png'),
+  bettergithub: require('../assets/better-github.png'),
+  bestgithub: require('../assets/best-github.png')
+};
+
 export default class Presentation extends React.Component {
   render() {
     return (
       <Deck transition={["zoom", "slide"]} transitionDuration={500} theme={theme}>
         <Slide transition={["zoom"]} bgColor="primary">
           <Heading size={1} fit caps lineHeight={1} textColor="secondary">
-            Git 잘 써보기
+            같이 해요 GitHub
           </Heading>
           <Text margin="20px 0 0" textColor="tertiary" size={1} bold>
-            ....안 망하길 🙏
+            GitHub 잘 사용하기
           </Text>
         </Slide>
         <Slide transition={["fade"]} bgColor="primary">
-          <Heading size={1} textColor="secondary" caps>왜 쓸까??</Heading>
-          <Text margin="20px 0 0" size={6} textColor="secondary">망했을 때 복구</Text>
+          <Heading size={4} textColor="secondary" caps>보통의 깃헙</Heading>
+          <Image src={images.badgithub.replace('/', '')} margin="0px auto 40px" />
         </Slide>
-        <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
-          <Heading size={3} textColor="secondary" caps>망한 상황</Heading>
-          <List textColor="secondary" margin="50px 0 0">
-            <ListItem margin="10px">아직 커밋 전😒</ListItem>
-            <ListItem margin="10px">커밋 후 소스 날려도 됨😑</ListItem>
-            <ListItem margin="10px">커밋 후 소스 날려도 안됨😖</ListItem>
-            <ListItem margin="10px">푸시 후 😵</ListItem>
-            <ListItem margin="10px">머지 후 😇</ListItem>
-          </List>
+        <Slide transition={["fade"]} bgColor="primary">
+          <Heading size={4} textColor="secondary" caps>이제 막 달리는(?) 깃헙</Heading>
+          <Image src={images.bettergithub.replace('/', '')} margin="0px auto 40px" />
         </Slide>
-        <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
-          <Heading size={3} textColor="secondary" caps>아직 커밋 전😀</Heading>
-          <Code margin="50px">git checkout .</Code>
+        <Slide transition={["fade"]} bgColor="primary">
+          <Heading size={4} textColor="secondary" caps>꾸준히 하는 깃헙</Heading>
+          <Image src={images.bestgithub.replace('/', '')} margin="0px auto 40px" />
         </Slide>
-        <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
-          <Heading size={3} textColor="secondary" caps>커밋 후 소스 날려도 됨😑</Heading>
-          <Code margin="50px">git reset --hard HEAD~3</Code>
-        </Slide>
-        <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
-          <Heading size={3} textColor="secondary" caps>커밋 후 소스 날려도 안됨😖</Heading>
-          <Code margin="50px">git reset --soft HEAD~3</Code>
-        </Slide>
-        <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
-          <Heading size={3} textColor="secondary" caps>푸시 후 😵</Heading>
-          <Code margin="50px">git push -f</Code>
-        </Slide>
-        <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
-          <Heading size={3} textColor="secondary" caps>머지 후 😇</Heading>
-          <Code margin="50px">git heaven</Code>
-        </Slide>
-        <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
-          <Heading size={3} textColor="secondary" caps>코드 임시저장</Heading>
-          <Code margin="50px">git stash save</Code>
-        </Slide>
-        <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
-          <Heading size={3} textColor="secondary" caps>아까 저장한 코드꺼내기</Heading>
-          <Code margin="50px">git stash pop</Code>
-        </Slide>
-        <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
-          <Heading size={3} textColor="secondary" caps>인생은 실전</Heading>
-          <Text>브랜치 안따고 master 에 계속 커밋 했을때....</Text>
-        </Slide>
-        <Slide transition={["fade"]} bgColor="secondary" textColor="primary">
-          <Heading size={3} textColor="primary" caps>끗</Heading>
+        <Slide transition={["fade"]} bgColor="primary">
+          <Heading size={4} textColor="secondary" caps>어떻게 하면 꾸준히 할 수 있을까?</Heading>
+          <Text margin="20px 0 0" textColor="tertiary" size={1} bold>
+            중요한건 마음..?!
+          </Text>
         </Slide>
       </Deck>
     );
